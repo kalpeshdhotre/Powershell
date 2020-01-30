@@ -86,6 +86,6 @@ function get-emailaddress
     Write-Host "Email address is $($fname.substring(0,1)).$lname@ntms.co.in"
 }
 
-get-emailaddress kalpes dhotre
+get-emailaddress Sachin Rasane  
 
 "kalpesh".substring(3, 2)
