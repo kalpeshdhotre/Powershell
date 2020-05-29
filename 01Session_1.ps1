@@ -2,7 +2,7 @@
 this is my first script
 This is multiline commentn #>
 
-# This is singleline comment Test #
+# This is singleline comment Test CommitTest On Github#
 
 get-command -noun service
 
@@ -20,7 +20,7 @@ get-command -verb set -noun service
 
 get-command -verb set -noun process
 
-Get-Help Get-Service
+Get-Help Get-Service -Online
 
 Get-Command -Verb update -Noun Help
 
@@ -34,14 +34,19 @@ Get-EventLog
 
 Get-Service | Where-Object {$_.Status -eq "stopped"}
 
+Get-Service | Where-Object {$_.status -eq "running"}
+
+Get-Service -Name *service | Where-Object {$_.Status -eq "running"}
+
 Get-Service | Format-List *
+(Get-Service).Status 
 (Get-Service).Status
 Get-Service | Get-Member
 "Kalpesh" | Get-Member
 "Kalpaesh".replace("a", "x")
 "Kalpesh".indexof("h",4)
 "kalpesh".Contains("x")
-"kalpesh".substring(3, 2)
+"kalpesh".substring(0, 2)
 Get-Variable
 $env:PSModulePath 
 Get-Help Get-Alias -Online 
@@ -50,3 +55,8 @@ Get-Alias -Definition copy-item
 Get-Help Copy-Item -Online
 Copy-Item C:\Windows\System32\drivers\etc c:\temp -Recurse
 Get-Command -verb 
+
+
+Get-help Get-Service 
+
+"This is simple string data type object".Contains("is")
